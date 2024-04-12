@@ -1,0 +1,20 @@
+var splashScreen=function () {
+    background(130, 79, 240);
+    drawBitmoji(197,225,64);
+    //Ava's Bitmoji goes here
+    fill(0, 0, 0);
+  var f = createFont("monospace");
+    textFont(f);
+    fill(0, 255, 94);
+    textSize(30);
+    text("Mad Fish", 127, 68,337,400);
+    textSize(15);
+    fill(56, 212, 21);
+    text("Eat The Other Fish ",98,136,226,235);
+    startButton.draw();
+};
+draw= function() {
+    if(currentScene===0)
+    {splashScreen(); }
+  
+};
