@@ -1,0 +1,89 @@
+//Ava Bitmoji
+var drawBitmoji = function(bX,bY,bH)
+    {var ratio=bH/100;
+        //hair
+        noStroke();
+    fill(82, 51, 38);
+    ellipse(bX+198*ratio,bY+176*ratio,184*ratio,196*ratio);
+    rect(bX+108*ratio,bY+143*ratio,181*ratio,293*ratio); 
+    var head;
+    head=200;
+    //head base
+    noStroke();
+    fill(242, 226, 213);
+    ellipse(bX+head*ratio,bY+head*ratio,149*ratio,211*ratio);
+    //sidehair
+    fill(82, 51, 38);
+    ellipse(bX+(head+76)*ratio,bY+(head+77)*ratio,45*ratio,227*ratio);
+    ellipse(bX+(head+-70)*ratio,bY+(head+47)*ratio,45*ratio,257*ratio);
+    //shaping chin
+    arc(bX+ratio*204,bY+ratio*319,131*ratio,201*ratio,-227,-148);
+    arc(bX+ratio*254,bY+ratio*266,131*ratio,201*ratio,77,150);
+    rect(bX+ratio*167,bY+ratio*299,70*ratio,30*ratio);
+    var eye;
+    eye=200;
+    //bangs
+    arc(bX+ratio*257,bY+ratio*110,145*ratio,69*ratio,71,225);
+    arc(bX+ratio*138,bY+ratio*110,150*ratio,64*ratio,-37,103);
+    arc(bX+ratio*129,bY+ratio*160,40*ratio,96*ratio,-54,106);
+    arc(bX+ratio*269,bY+ratio*160,30*ratio,116*ratio,22,245);
+    //eye whites
+    strokeWeight(1);
+    stroke(3, 0, 3);
+    fill(255, 255, 255);
+    ellipse(bX+ratio*(eye-29),bY+ratio*205,30*ratio,12*ratio);
+    ellipse(bX+ratio*(229),bY+ratio*205,30*ratio,12*ratio);
+    //eye color
+    noStroke();
+    fill(58, 116, 150);
+    ellipse(bX+ratio*(eye-29),bY+ratio*204,12*ratio,12*ratio);
+    ellipse(bX+ratio*(229),bY+ratio*204,12*ratio,12*ratio);
+    //pupil
+    fill(3, 0, 0);
+    ellipse(bX+ratio*(eye-29),bY+ratio*204,5*ratio,5*ratio);
+    ellipse(bX+ratio*(229),bY+ratio*204,5*ratio,5*ratio);
+    //lashes left
+    strokeWeight(2);
+    stroke(0, 0, 0);
+    fill(0, 0, 0);
+    arc(bX+ratio*(eye-44),bY+ratio*(eye+2),10*ratio,7*ratio,-1,(eye+-28));
+    //lashes right
+    arc(bX+ratio*(eye+45),bY+ratio*(eye+2),10*ratio,7*ratio,-1,(eye+11));
+    //brow
+    noStroke();
+    fill(84, 55, 41);
+    rect(bX+ratio*(eye+11),bY+ratio*(eye-20),30*ratio,5*ratio);
+    triangle(bX+ratio*(eye+27),bY+ratio*(eye-20),bX+ratio*(eye+58),bY+ratio*(eye+-10),bX     +ratio*(eye+45),bY+ratio*(eye-20));
+    rect(bX+ratio*(eye+-41),bY+ratio*(eye-20),30*ratio,5*ratio);
+    triangle(bX+ratio*(eye+-44),bY+ratio*(eye-20),bX+ratio*(eye+-59),bY+ratio*(eye+-9),bX     +ratio*(eye+-29),bY+ratio*(eye-20));//nose
+    fill(196, 149, 125);
+    arc(bX+ratio*(eye+0),bY+ratio*(eye+35),23*ratio,10*ratio,-34,180);
+    fill(230, 205, 177);
+    arc(bX+ratio*(eye+-5),bY+ratio*(eye+15),11*ratio,40*ratio,168,331); //mouth
+    fill(247, 175, 151);
+    stroke(217, 128, 104);
+    fill(255, 77, 0);
+    line(bX+ratio*(eye-20),bY+ratio*(eye+62),bX+ratio*(eye+19),bY+ratio*(eye+62)); //blush
+    noStroke();
+    fill(250, 193, 177);
+    ellipse(bX+ratio*162,bY+ratio*223,25*ratio,11*ratio);
+    ellipse(bX+ratio*238,bY+ratio*223,25*ratio,11*ratio); //neck
+    fill(201, 165, 128);
+    rect(bX+ratio*173,bY+ratio*287,53*ratio,50*ratio);
+    var drawShirt= function(){ //shirt
+        noStroke();
+        fill(166, 163, 166);
+        rect(bX+ratio*166,bY+ratio*325,70*ratio,119*ratio);
+        rect(bX+ratio*163,bY+ratio*299,75*ratio,28*ratio);//shoulders
+        fill(163, 160, 163);
+        rect(bX+ratio*64,bY+ratio*326,49*ratio,119*ratio);
+        rect(bX+ratio*288,bY+ratio*326,49*ratio,119*ratio);
+    };
+    drawShirt();//chin
+    fill(242, 226, 213);
+    arc(bX+ratio*200,bY+ratio*286,55*ratio,29*ratio,1,180);//text
+    fill(237, 228, 242);
+    textSize(40*ratio);
+    text("AB",bX+ratio*172,bY+ratio*347,138*ratio,137*ratio);
+};
+
