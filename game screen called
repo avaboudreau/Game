@@ -1,0 +1,11 @@
+var gameScreen=function () {
+    background(14, 56, 194);
+};
+
+draw= function() {
+    if(currentScene===0)
+    {splashScreen(); }
+    if(currentScene===1)
+    {gameScreen(); }
+  
+};
