@@ -1,0 +1,37 @@
+  var drawbitmojiHead=function(X,Y,bitmojiHeight) {
+    var ratio=bitmojiHeight/100;
+fill(255, 205, 148); // head color
+ellipse(X+0*ratio,Y+0*ratio,100*ratio,85*ratio); //head
+
+fill(255, 255, 255);
+arc(X-58*ratio,Y-137*ratio,28*ratio,55*ratio,0,361); //left chisel
+arc(X+142*ratio,Y-137*ratio,28*ratio,55*ratio,0,361); //right chisel
+
+fill(99, 72, 35); //left hair color 
+quad(X-59*ratio,Y+102*ratio,X-48*ratio,Y-23*ratio,X-1*ratio,Y-50*ratio,X-27*ratio,Y+7*ratio); // left hair
+quad(X+49*ratio,Y+98*ratio,X+50*ratio,Y-32*ratio,X-20*ratio,Y-46*ratio,X+24*ratio,Y-13*ratio); // right hair
+
+ellipse(X+0*ratio,Y-37*ratio,62*ratio,28*ratio);
+fill(61, 148, 129);
+stroke(8, 2, 2);
+
+ellipse(X-13*ratio,Y+0*ratio,9*ratio,8*ratio); //left eye
+ellipse(X+15*ratio,Y+0*ratio,9*ratio,8*ratio); // right eye
+stroke(43, 40, 26);
+fill(255, 205, 148);
+};
+    var drawbitmojiBody=function(X,Y,bitmojiHeight) {
+        var ratio=bitmojiHeight/100;
+bezier(X+0*ratio,Y+0*ratio,X+21*ratio,Y+22*ratio,X-8*ratio,Y+20*ratio,X-4*ratio,Y+15*ratio); // nose
+fill(247, 234, 234);
+arc(X-1*ratio,Y+25*ratio,30*ratio,13*ratio,0,168); // mouth
+line(X-17*ratio,Y+24*ratio,X+19*ratio,Y+23*ratio); // top of mouth
+fill(204, 110, 110);
+ellipse(X-22*ratio,Y+18*ratio,9*ratio,10*ratio); // left blush
+ellipse(X+23*ratio,Y+19*ratio,9*ratio,10*ratio); // right blush
+};
+
+var drawBitmoji=function(bitmojiX,bitmojiY,bitmojiHeight) {
+    drawbitmojiHead(bitmojiX,bitmojiY,bitmojiHeight);
+    drawbitmojiBody(bitmojiX,bitmojiY,bitmojiHeight);
+};
