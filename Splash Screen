@@ -13,8 +13,4 @@ var splashScreen=function () {
     text("Eat The Other Fish ",98,136,226,235);
     startButton.draw();
 };
-draw= function() {
-    if(currentScene===0)
-    {splashScreen(); }
-  
-};
+
