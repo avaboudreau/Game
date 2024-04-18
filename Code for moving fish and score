@@ -1,0 +1,45 @@
+var currentScene=0;
+var score=0;
+var level=1;
+var userFishSize=0;
+var gameScreen=function () {
+     background(14, 56, 194);
+    drawFish(mouseX,mouseY,50,50);//ellipse tracker
+    for(var i=0; i < xPositions.length; ++i) {  //for loop for each 50 bitmojis
+        drawFish(xPositions[i], yPositions[i],fishSize[i]);
+        xPositions[i]+=moveSpeed[i];
+      if(xPositions[i] > 390 ) { //Is not tagged
+          xPositions[i]=(round(random(-40,40))); //Restart on left side 
+        
+       text("Level: " + level + "  Score: " + score,30,30);
+    var fishDist=dist(mouseX,mouseY,xPositions,yPositions);
+    if(fishDist<25) {
+        score++;
+     background(14, 56, 194);
+    fill(13, 12, 13);
+    rect(0,0,206,50);
+    noStroke();
+    fill(255, 15, 27);
+    textSize(20);
+    text("Score: " + score,130,30);
+    textSize(20);
+    text("Level 1:",50,30);
+    {
+}
+    }
+  }
+    }    
+
+var mouseClicked=function() { 
+for(var i=0; i<numFish; ++i) { //for loop for if it is tagged 
+    if(mouseX > xPositions[i] - 50 && 
+       mouseX < xPositions[i] + 50 && 
+       mouseY > yPositions[i] -50 &&
+       mouseY < yPositions[i] + 50){
+           yPositions[i]=500;
+} 
+      } 
+            
+    
+};   
+};
