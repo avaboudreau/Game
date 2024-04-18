@@ -228,7 +228,7 @@ var userFishSize=0;
 var gameScreen=function () {
      background(14, 56, 194);
     drawFish(mouseX,mouseY,50,50);//ellipse tracker
-    for(var i=0; i < xPositions.length; ++i) {  //for loop for each 50 bitmojis
+    for(var i=0; i < xPositions.length; ++i) {  //for loop for each 15 fish
         drawFish(xPositions[i], yPositions[i],fishSize[i]);
         xPositions[i]+=moveSpeed[i];
       if(xPositions[i] > 390 ) { //Is not tagged
@@ -253,7 +253,7 @@ var gameScreen=function () {
   }
     }    
 
-var mouseClicked=function() { 
+var mouseClicked=function() {  
 for(var i=0; i<numFish; ++i) { //for loop for if it is tagged 
     if(mouseX > xPositions[i] - 50 && 
        mouseX < xPositions[i] + 50 && 
