@@ -1,0 +1,52 @@
+var playerY = 200;
+var playerX = 200;
+var playerMoveSpeed = 2;
+
+var movePlayerUp = function() {
+    playerY -= playerMoveSpeed;
+};
+var movePlayerDown = function() {
+    playerY += playerMoveSpeed;
+};
+var movePlayerRight = function() {
+    playerX += playerMoveSpeed;
+};
+var movePlayerLeft = function() {
+    playerX -= playerMoveSpeed;
+};
+var drawPlayer = function() {
+    //Constrain the player movement
+    playerY = constrain(playerY,15,385); 
+    playerX = constrain(playerX,15,385); 
+    noStroke();
+    fill(255, 123, 0);//player fish
+    ellipse(playerX,playerY,30,30);//body
+    ellipse(playerX+15,playerY,9,5);//lip
+    ellipse(playerX+15,playerY+5,9,5);
+    triangle(playerX+-6,playerY+-1,playerX+-25,playerY+-20,playerX+-25,playerY+20);//tail
+    fill(255,255,255);
+    ellipse(playerX+7,playerY-2,5,5);//eye
+    fill(10, 9, 9);
+    ellipse(playerX+7,playerY-2,3,3);
+};
+
+draw= function() {
+    background(255, 255, 255);
+    drawPlayer();
+      if (keyIsPressed) {
+        if (keyCode === UP){
+             movePlayerUp();
+        }
+        else if (keyCode === DOWN) {
+            movePlayerDown();
+        }
+         if (keyCode === RIGHT){
+             movePlayerRight();
+        }
+         if (keyCode === LEFT){
+             movePlayerLeft();
+        }
+    }
+};
+
+
