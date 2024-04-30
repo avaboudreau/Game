@@ -378,12 +378,12 @@ for(var i=0; i < RedFish; ++i) {
         var redFishBottom = yPositions[i] + (redFishHeight/2);
 
     // Check for overlap with player's fish
- var redFishWidth= 56;
- var redFishHeight= 37;
-if (playerX + 25 > redFishLeft && 
-    playerX - 55 < redFishRight &&
-    playerY + 25 > redFishTop && 
-    playerY - 55 < redFishBottom) {
+  var redFishWidth= 100;
+  var redFishHeight= 40;
+if (playerX + 30 > redFishLeft && 
+    playerX - 15 < redFishRight &&
+    playerY + 20 > redFishTop && 
+    playerY - 5 < redFishBottom)  {
     // If player's fish overlaps with red fish, trigger end screen
     currentScene = 2; // Set the scene to the end screen
     return; //Return so it doesn't continue the game 
