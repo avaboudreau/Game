@@ -378,6 +378,8 @@ for(var i=0; i < RedFish; ++i) {
         var redFishBottom = yPositions[i] + (redFishHeight/2);
 
     // Check for overlap with player's fish
+ var redFishWidth= 56;
+ var redFishHeight= 37;
 if (playerX + 25 > redFishLeft && 
     playerX - 55 < redFishRight &&
     playerY + 25 > redFishTop && 
